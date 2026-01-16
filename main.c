@@ -4,39 +4,44 @@
 
 int main()
 {
-        char str[99];
-    int i,n,len,sum=0,j,bas,son,palindrom;
+    char str[99];
+    int i, n, len, sum = 0, j, bas, son, palindrom;
 
     printf("str girin ");
-    scanf("%s",&str);
+    scanf("%s", &str);
 
     printf("n i girin ");
-    scanf("%d",&n);
+    scanf("%d", &n);
 
-    len=0;
-    i=0;
+    len = 0;
+    i = 0;
 
-    while(str[i]!='\0'){
+    while (str[i] != '\0')
+    {
         len++;
         i++;
     }
 
-    bas=n-1;
-    son=len-n;
+    bas = n - 1;
+    son = len - n;
 
-    while(son>bas){
-        if(str[bas]!=str[son]){
-            palindrom=0;
+    while (son > bas)
+    {
+        if (str[bas] != str[son])
+        {
+            palindrom = 0;
             break;
         }
         son--;
         bas++;
     }
 
-    if(palindrom==1){
+    if (palindrom == 1)
+    {
         printf("palindromdur.");
     }
-    else{
+    else
+    {
         printf("palindrom degildir.");
     }
 }
